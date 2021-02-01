@@ -18,7 +18,7 @@ jobs:
           override: true
 
       - name: Build
-        run: cargo build --all release && strip target/release/prominent && mv target/release/prominent target/release/prominent_amd64
+        run: cargo build --all --release && strip target/release/prominent && mv target/release/prominent target/release/prominent_amd64
 
       - name: Release
         uses: softprops/action-gh-release@v1
